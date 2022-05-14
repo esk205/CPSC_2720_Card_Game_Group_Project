@@ -1,0 +1,14 @@
+// Brett Regnier
+	1. rank variable in Card class should be renamed to pip (named of card number/face), because rank is a reserved word.
+	2. Potentially use a enumeration for pip instead of a string
+	3. The UML diagram doesn't have a method for Play() in Game.
+	4. In the Deck UML diagram +addCard(Card card) is missing a method type.
+	5. In the UML diagram some consructors are not consistantly written out.
+	6. In the UML diagram for Choices remove() shouldn't be used as a method name... reserved word. same with clear(), and size(). Suggsest removeChoice(), and clearChoices(). Not sure for size();
+	7. Player should have a constructor that sets name???
+
+// Brad Lindsay
+
+// Daylend de Grasse
+
+// Michael Wynnychuk

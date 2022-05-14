@@ -1,0 +1,3 @@
+Hello Friends.
+
+Please add to the .hgignore file all of the files we will not need, such as any IDE generated file, that I have added in for codeblocks, if you use a different IDE such as visual studio please keep the files that it generates for your interface in your local repo and not on the server repo. Thanks!

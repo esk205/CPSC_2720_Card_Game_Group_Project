@@ -1,0 +1,56 @@
+Game g;
+
+do 
+	if (game not started)
+		check which game you'd like to start
+			prompt user for input (display menu)
+			g = gofish; <-- set the game type to go fish             
+			g.start(); <-- start the game (sets game to started)
+
+    	if (g != null)
+		g.checkState() <-- are we just starting?
+						have cards been dealt?
+						who's turn is it?
+						what part of the turn are we in?
+
+
+while (gameOn)
+
+
+class gofish : game {
+	
+	state : enum {
+		begin
+		playing
+	}
+
+	start() { <-- this is a virtual method of game class.
+		gamestate = begin;
+		deck = null;
+		turn = 0;
+		// reset all the state variables here.
+	}
+
+	checkState() { <-- this is a pure virtual method of game class.
+		if game state is begin {
+			doBegin()
+			game state = playing
+		}
+	}
+
+	doBegin() { <-- this is an implementation specific class 
+		deck = Deck(DeckType.Standard)
+
+		dealer = pick random player from all players
+		dealer.deck = deck;
+		dealer.deck.shuffle()
+
+		startPlayer = null;
+		highCard = 0;
+		foreach player in game
+			Card lastdealt = dealer.deal(1, player); <-- deal 1 card to each player (checks if there is a card left to deal)
+			if (startPlayer is null or lastdealt.value > highCard)
+				startPlayer = player
+	}
+
+}
